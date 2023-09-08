@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+
+  <style>
+    /* font-family: 'Rubik', sans-serif; */
+    body{
+  height: 50vh;
+
+    }
+    .rect
+    {
+      max-width:500px;
+      height: 750px;
+      margin: -150px;
+      border-radius: 0px 0px 300px 300px;
+      background-image: linear-gradient(hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+    }
+    .mobile
+    {
+      display: flex;
+      flex-direction: column;
+      max-width: 290px;
+      height: 600px;
+      background-color:hsl(270, 20%, 96%);
+      margin-top: -230px;
+      margin-left: 50px;
+      border-radius: 35px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+    }
+    .container
+    {
+      display: flex;
+      margin-top: -300px;
+      justify-content:space-evenly;
+    }
+    .text
+    {
+      font-family: 'Rubik', sans-serif;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      vertical-align: top;
+    }
+    .text h1{
+      color: hsl(271, 36%, 24%);
+      font-size: 50px;
+      margin-bottom: 0px;
+    }
+    .text p{
+      color:hsl(270, 7%, 64%);
+      max-width: 450px;
+      margin-top: 20px;
+  
+    }
+    .rectb
+    {
+      max-width:500px;
+      height: 650px;
+      padding: 0px;
+      border-radius: 0px 0px 300px 300px;
+      background-image: linear-gradient(hsla(293, 100%, 63%,0.5),hsla(264, 100%, 61%,0.5));
+      transform:  translate(1200px,200px)rotate(180deg); 
+      opacity: 0.1;
+
+    }
+    .topc
+    {
+      background-image:  linear-gradient(to left,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+      margin: 10px 10px 0px;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      height: 80px;
+      
+    }
+    .topc1
+    {
+      display: flex;
+      align-items: center;
+    }
+    .whitec
+    {
+      width:150px;
+      height:25px;
+      margin-top: -10px;
+      background-color: hsl(270, 20%, 96%);
+      margin-left:50px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .topc img{
+      width: 35px;
+      height:35px;
+      border-radius: 50%;
+      border: 3px solid white
+     }
+     .topctext
+     {
+      display: flex;
+      flex-direction: column;
+      justify-content:space-around;
+      font-family: 'Rubik', sans-serif;
+     }
+     .topctext h4
+     {
+      margin-top: 10px;
+      color: white;
+     
+     }
+     .topctext p{
+      margin-top: -15px;
+      color: hsl(276, 100%, 81%);
+      margin-right:60px;
+      font-size: 10px;
+      
+     }
+     .rightc
+     {
+      color: hsl(276, 55%, 52%);
+     }
+     .leftc p
+    {
+      float:right;
+      width: 200px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 10px;
+      color:  hsl(271, 15%, 43%);
+      box-shadow:5px 5px 5px rgba(0, 0, 0, 0.4);
+      margin: 5px;
+    }
+     .rightc p
+     {
+      width:200px;
+      background-color:hsl(206, 6%, 79%);
+      margin: 5px;
+      border-radius: 10px;
+      opacity: 0.8;
+      padding: 5px;
+      box-shadow:5px 5px 5px rgba(0, 0, 0, 0.4);
+      font-size: 13px;
+     }
+     .images1 img{
+      width:50px;
+      height:50px;
+      border-radius: 10px;
+      float: right;
+      margin-right: 10px;
+     }
+    .purple
+    {
+      width:230px;
+      background-image:  linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+      padding: 10px;
+      margin: 5px;
+      border-radius: 10px;
+    }
+    .purple h4
+    {
+      display: inline;
+      color: white;
+      margin-left:70px;
+      font-size: 22px;
+    }
+    .two h4{
+      margin-left: 90px;
+    }
+    .purple p{
+      display: inline;
+      color: white;
+      opacity: 0.7;
+    }
+    .input
+    {
+      margin-top: 20px;
+      margin-left: 10px;
+      border-radius: 10px;
+      width:90% ;
+      height: 40px;
+      background-color: white;
+      text-align: center;
+      padding-top: 10px;
+    }
+    .input p
+    {
+      opacity: 0.6;
+      display: inline-block;
+      text-align: center;
+    }
+   
+    
+    @media screen and (max-width:600px){
+      .container
+      {
+        flex-direction: column;
+      }
+      .text{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .text p
+      {
+        width: 300px;
+      }
+      .rect
+      {
+        height:auto;
+        width:50%;
+      }
+      .mobile
+      {
+        margin-top:-170px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rect"><div class="rectb"></div></div>
+  
+  <div class="container">
+  <div class="mobile">
+ <div class="topc">
+  <div class="whitec"></div>
+  <div class="topc1">
+  <i class="fi fi-rr-angle-small-left" style="color: white ;font-size: 30px;"></i>
+  <img src="images/avatar.jpg">
+  <div class="topctext">
+  <h4>Samuel Green </h4>
+ <p> Available to Walk</p>
+</div>
+<i class="fi fi-rr-menu-dots-vertical" style="color:white"></i>
+</div>
+</div> 
+<div class="rightc">
+  <p>That sounds great. I’d be happy with that.</p>
+
+  <p>Could you send over some pictures of your dog, please?</p>
+</div>
+<div class="images1">
+  <img src="images/dog-image-1.jpg">
+  <img src="images/dog-image-2.jpg">
+  <img src="images/dog-image-3.jpg">
+</div>
+<div class="leftc">
+  <p>Here are a few pictures. She’s a happy girl!</p>
+
+  <p>Can you make it?</p>
+</div>
+<div class="rightc">
+  <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+</div>
+<div class="purple one">
+ <i class="fi fi-rr-circle" style="color:white; opacity: 0.7;"></i>
+  <p>30 minute walk</p>
+  <h4>$29</h4>
+</div>
+<div class="purple two">
+  <i class="fi fi-rr-circle" style="color:white; opacity: 0.7;"></i>
+ <p>1 hour walk</p> 
+ <h4> $49</h4>
+</div>
+<div class="input"><p>Type message here...</p><i class="fi fi-ss-angle-circle-right"style="margin:200px 0px 100px 90px;text-align:center; font-size:30px;"></i></div>
+
+</div>
+<div class="text">
+ <h1>Simple booking</h1>
+
+  <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+  discuss arrangements and make bookings. Once the walk has been completed you can rate 
+  your walker and book again all through the chat.</p>
+</div>
+</div>
+
+</body>
+</html>
